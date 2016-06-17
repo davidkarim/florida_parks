@@ -11,15 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160617050206) do
+ActiveRecord::Schema.define(version: 20160617181824) do
 
   create_table "parks", force: :cascade do |t|
     t.string   "name"
     t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
     t.string   "phone_number"
-    t.string   "description"
-    t.string   "link"
     t.string   "park_url"
+    t.string   "description"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end

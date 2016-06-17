@@ -3,15 +3,19 @@
 one:
   name: MyString
   address: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
   phone_number: MyString
-  description: MyString
-  link: MyString
   park_url: MyString
+  description: MyString
 
 two:
   name: MyString
   address: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
   phone_number: MyString
-  description: MyString
-  link: MyString
   park_url: MyString
+  description: MyString
