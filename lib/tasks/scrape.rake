@@ -1,4 +1,4 @@
-
+# Execute this rake file by issuing rake scrape:fl_parks
 namespace :scrape do
   desc "Scrape list of Florida parks from the Florida State Parks website"
   task fl_parks: :environment do
@@ -39,6 +39,7 @@ namespace :scrape do
         # Scrape for address
         address_obj = dom.xpath("//*[@id='block-system-main']/div/div[3]/div[#{counter}]//div[@class='park-list-info']/address").first
         if address_obj
+          # Retrieve the first and second line of address. Second line has city, state, and zip.
           addresses1 << address_obj.element_children[0].content
           addresses2 << address_obj.element_children[1].content
         end
@@ -90,7 +91,9 @@ namespace :scrape do
     puts "\nPopulating database."
     # Populate database with scraped info
     park_names.count.times.each do |i|
+      # Street address is located on line 1 of address (address1)
       address = addresses1[i]
+      # City is item before last, strip removes leading and trailing spaces
       city = addresses2[i].split(",").fetch(-2).strip
       state = addresses2[i].split(",").last.split(" ").first
       zip = addresses2[i].split(",").last.split(" ").last
