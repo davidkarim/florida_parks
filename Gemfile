@@ -47,4 +47,5 @@ group :development do
   gem "httparty"
   gem "nokogiri"
   gem "hirb"
+  gem "pry-rails"
 end

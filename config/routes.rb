@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'parks#index'
 
+    get 'parks/refresh', to: 'parks#refresh_partial'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
