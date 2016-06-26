@@ -5,9 +5,13 @@
 <h1>Listing Parks</h1>
 
   <%= form_for(@park, url: :parks_index) do |p| %>
-  <div>
+  <div id="name_form">
     <%= p.label :name %><br>
     <%= p.text_field :name %>
+  </div>
+  <div id="city_form">
+    <%= p.label :city %><br>
+    <%= p.text_field :city %>
   </div>
   <% end %>
 
