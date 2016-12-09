@@ -1,5 +1,7 @@
 # README
 
+[![Build Status](http://jenkins.dkarim.com/job/florida_parks_build/badge/icon)](http://jenkins.dkarim.com/job/florida_parks_build)
+
 This Rails app demonstrates the concept of web scraping. The app is meant to be an easier way to view Florida Parks information. The information is gathered through a scraper. The scraper is initiated via a rake task located [here](lib/tasks/scrape.rake). To run the app:
 
 * Clone the repo
