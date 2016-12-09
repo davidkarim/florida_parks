@@ -3,4 +3,10 @@
 
 require File.expand_path('../config/application', __FILE__)
 
+require 'ci/reporter/rake/rspec'
+# ...
+# Rake code that creates a task called `:rspec`
+# ...
+# Run CI reporter like this: bundle exec rake ci:setup:rspec spec
+
 Rails.application.load_tasks
