@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ParksController GET #index" tests="2" time="0.025172" failures="0" errors="0" skipped="0" timestamp="2016-12-09T18:29:30-05:00">
-  <testcase name="ParksController GET #index responds successfully with an HTTP 200 status code" time="0.022645">
+<testsuite name="ParksController GET #index" tests="2" time="0.031913" failures="0" errors="0" skipped="0" timestamp="2016-12-09T20:17:36-05:00">
+  <testcase name="ParksController GET #index responds successfully with an HTTP 200 status code" time="0.029302">
   </testcase>
-  <testcase name="ParksController GET #index renders the index template" time="0.002019">
+  <testcase name="ParksController GET #index renders the index template" time="0.002113">
   </testcase>
 </testsuite>
