@@ -13,4 +13,27 @@ RSpec.describe ParksController, type: :controller do
       expect(response).to render_template("index")
     end
   end
+
+  # describe "Submit form" do
+  #
+  #   before do
+  #     visit /edit_account_settings(@user)
+  #     fill_in "username", :with => "fo"
+  #     click_button "SAVE"
+  #   end
+  #
+  #   it "should not sumbit if user name is less than 3 characters" do
+  #     page.should have_content "your error message"
+  #   end
+  #
+  #   it "should create the user and redirect to blah_path" do
+  #     current_path.should eq blah_path
+  #   end
+  #
+  #   it "should add user in users table" do
+  #     expect { user.create }.to change(User, :count).from(0).to(1)
+  #   end
+  #
+  # end
+
 end

@@ -159,6 +159,11 @@ GEM
       json (>= 1.8, < 3)
       simplecov-html (~> 0.10.0)
     simplecov-html (0.10.0)
+    simplecov-json (0.2)
+      json
+      simplecov
+    simplecov-rcov (0.2.3)
+      simplecov (>= 0.4.1)
     slop (3.6.0)
     spring (2.0.0)
       activesupport (>= 4.2)
@@ -204,6 +209,8 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   simplecov
+  simplecov-json
+  simplecov-rcov
   spring
   sqlite3
   turbolinks
