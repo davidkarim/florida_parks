@@ -15,3 +15,4 @@ This Rails app demonstrates the concept of web scraping. The app is meant to be 
 * Run the Rails server and visit localhost:3000
 
 * Pending items: add additional parks, increase test coverage, searching through AJAX
+.
