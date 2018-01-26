@@ -31,7 +31,7 @@ jobs:
           command: |
             bundle install --jobs=4 --retry=3 --path vendor/bundle
       - run:
-          name: Instal JS Runtime
+          name: Install JS Runtime
           command: |
             sudo apt-get install nodejs
             sudo apt-get install npm
@@ -52,11 +52,7 @@ jobs:
             mkdir /tmp/test-results
             TEST_FILES="$(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)"
 
-            bundle exec rspec --format progress \
-                            --format RspecJunitFormatter \
-                            --out /tmp/test-results/rspec.xml \
-                            --format progress \
-                            $TEST_FILES
+            bundle exec rspec --format progress $TEST_FILES --out /tmp/test-results/rspec.xml
 
       # collect reports
       - store_test_results:
