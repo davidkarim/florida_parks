@@ -16,6 +16,9 @@ jobs:
 
     working_directory: ~/repo
 
+    artifacts:
+      - "~/simplecov" # relative to the user's home directory
+
     steps:
       - checkout
 

@@ -21,3 +21,4 @@
 
 .DS_Store
 rspec.xml
+.pry_history
