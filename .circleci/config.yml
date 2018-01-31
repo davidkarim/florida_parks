@@ -60,4 +60,4 @@ jobs:
       - store_test_results:
           path: /tmp/test-results
       - store_artifacts:
-          path: /coverage
+          path: /tmp/test-results
