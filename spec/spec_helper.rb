@@ -28,11 +28,9 @@ SimpleCov.formatters = [
 ]
 
 puts "SimpleCov Integration with Circle-CI"
-puts "CIRCLE_ARTIFACTS: #{ENV['CIRCLE_ARTIFACTS']}"
 # save to CircleCI's artifacts directory if we're on CircleCI
-if ENV['CIRCLE_ARTIFACTS']
-  dir = File.join(ENV['CIRCLE_ARTIFACTS'], "coverage")
-  SimpleCov.coverage_dir(dir)
+if ENV['CIRCLECI']
+  SimpleCov.coverage_dir("coverage")
 end
 
 SimpleCov.start

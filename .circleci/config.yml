@@ -16,9 +16,6 @@ jobs:
 
     working_directory: ~/repo
 
-    artifacts:
-      - "~/simplecov" # relative to the user's home directory
-
     steps:
       - checkout
 
@@ -64,4 +61,3 @@ jobs:
           path: /tmp/test-results
       - store_artifacts:
           path: /tmp/test-results
-          destination: test-results
