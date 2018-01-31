@@ -28,6 +28,9 @@ gem 'simplecov', :require => false, :group => :test
 gem 'simplecov-rcov', :require => false, :group => :test
 gem 'simplecov-json', :require => false, :group => :test
 
+gem 'rspec-rails', '~> 3.0'
+gem "rspec_junit_formatter", '~> 0.3'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -40,7 +43,6 @@ gem 'simplecov-json', :require => false, :group => :test
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-  gem 'rspec-rails', '~> 3.0'
   gem 'ci_reporter_rspec'
 end
 
