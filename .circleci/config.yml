@@ -50,11 +50,11 @@ jobs:
           name: run tests
           command: |
             mkdir /tmp/test-results
-            bundle exec rspec
-            --profile 10 \
-            --format RspecJunitFormatter \
-            --out /tmp/test-results/rspec.xml \
-            --format progress
+            bundle exec rspec \
+              --profile 10 \
+              --format RspecJunitFormatter \
+              --out /tmp/test-results/rspec.xml \
+              --format progress
 
       # collect reports
       - store_test_results:
