@@ -15,8 +15,14 @@ RSpec.describe ParksController, type: :controller do
   end
 
   describe "GET #refresh_partial" do
-    it "responds successfully with an HTTP 200 status code" do
+    it "responds successfully to GET with an HTTP 200 status code" do
       get :refresh_partial, {input_name: "park", input_city: ""}
+      expect(response).to be_success
+      expect(response).to have_http_status(200)
+    end
+
+    it "responds successfully to xhr / ajax GET with an HTTP 200 status code" do
+      xhr :get, :refresh_partial, {input_name: "park", input_city: ""}
       expect(response).to be_success
       expect(response).to have_http_status(200)
     end
