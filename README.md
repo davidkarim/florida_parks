@@ -17,3 +17,32 @@ This Rails app demonstrates the concept of web scraping. The app is meant to be 
 * Pending items: add additional parks, increase test coverage, searching through AJAX
 
 Changes that are pushed to GitHub are automatically built and tested with Circle-CI.
+
+## Publishing Docker image
+Create the Docker image on your local machine:
+
+```
+docker build -t florida-parks .
+```
+Test the Docker image locally:
+
+```
+# Test image through bash
+docker run --rm -p 3000:3000 -it --entrypoint bash florida-parks:latest
+rails server --binding=0.0.0.0
+# Test the image fully
+docker run --rm -p 3000:3000 florida-parks:latest
+```
+
+Publish image to Docker hub:
+
+```
+# Get the image ID
+image_id=$(docker images | grep florida-parks | awk -v N=3 '{print $N}')
+# Tag the image
+docker tag $image_id davidkarim/florida-parks:0.1
+# Login to Docker Hub and publish
+docker login
+docker push <username>/florida-parks
+```
+
