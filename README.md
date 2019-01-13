@@ -46,3 +46,23 @@ docker login
 docker push <username>/florida-parks
 ```
 
+## Deploying with Kubernetes
+Ensure your kubectl tools are properly communicating with your desired Kubernetes cluster:
+
+```
+kubectl get svc
+```
+Deploy the pods and loadbalancer onto the Kubernetes cluster:
+
+```
+# Deploy pods
+kubectl apply -f ./web-deploy.yml
+# View the deployed pods
+kubectl get pods
+# Deploy the load balancer service (must be deploying to a cloud service)
+kubectl apply -f ./web-lb.yml
+# View the services
+kubectl get svc
+kubectl describe svc web-svc # Public IP shown as LoadBalancer Ingress
+```
+
