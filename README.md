@@ -30,11 +30,12 @@ Test the Docker image locally:
 # Test image through bash
 docker run --rm -p 3000:3000 -it --entrypoint bash florida-parks:latest
 rails server --binding=0.0.0.0
+
 # Test the image fully
 docker run --rm -p 3000:3000 florida-parks:latest
 ```
 
-Publish image to Docker hub:
+Publish image to Docker Hub:
 
 ```
 # Get the image ID
@@ -52,7 +53,7 @@ Ensure your kubectl tools are properly communicating with your desired Kubernete
 ```
 kubectl get svc
 ```
-Deploy the pods and loadbalancer onto the Kubernetes cluster:
+Latest changes should be in Docker Hub. Deploy the pods and loadbalancer onto the Kubernetes cluster:
 
 ```
 # Deploy pods
